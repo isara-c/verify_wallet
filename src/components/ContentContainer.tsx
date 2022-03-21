@@ -36,6 +36,11 @@ export const ContentContainer: FC = props => {
               <a>NFT</a>
             </Link>
           </li>
+          <li>
+            <Link href='/form'>
+              <a>Form</a>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
