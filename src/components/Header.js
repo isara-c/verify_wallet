@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import * as settings from '../settings';
+import * as settings from './settings';
 
 class Header extends React.Component {
     static propTypes = {

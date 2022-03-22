@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import * as conf from '../settings';
+import * as conf from './settings';
 import axios from 'axios';
 
 async function exchangeToken(code) {

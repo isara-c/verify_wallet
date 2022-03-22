@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../comps/Header';
+import Header from './Header';
 import { getTokensForServer, getTokensForBrowser } from "./oauth";
 
 export default Page => class Template extends React.Component {

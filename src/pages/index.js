@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-import template from "../public/template";
+import PropTypes from 'prop-types';
+import template from "../components/template";
 
 const Home = props => (
   <div>
