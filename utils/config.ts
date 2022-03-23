@@ -28,7 +28,7 @@ export const config = {
   appUri: validateEnv("APP_URI", "http://localhost:3000", true),
   jwtSecret: validateEnv(
     "JWT_SECRET",
-    "this is a development value that should be changed in production!!!!!",
+    "Demo Atadia",
     true
   ),
 } as const;
