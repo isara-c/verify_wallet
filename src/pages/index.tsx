@@ -1,20 +1,30 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import { HomeView } from "../views";
+import { GetServerSideProps } from "next";
+import { DiscordUser } from "../../utils/types";
+import { parseUser } from "../../utils/parse-user";
 
-const Home: NextPage = (props) => {
+interface Props {
+  user: DiscordUser;
+}
+
+export default function Index(props: Props) {
   return (
-    <div>
-      <Head>
-        <title>Solana Scaffold</title>
-        <meta
-          name="description"
-          content="Solana Scaffold"
-        />
-      </Head>
-      <HomeView />
-    </div>
+    <h1>
+        Hey, {props.user.username}#{props.user.discriminator}
+    </h1>
   );
-};
+}
 
-export default Home;
+export const getServerSideProps: GetServerSideProps<Props> = async function (ctx) {
+  const user = parseUser(ctx);
+
+  if (!user) {
+    return {
+      redirect: {
+        destination: "/api/oauth",
+        permanent: false,
+      },
+    };
+  }
+
+  return { props: { user } };
+};
