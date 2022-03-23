@@ -9,7 +9,7 @@ interface Props {
 export default function Index(props: Props) {
   return (
     <h1>
-        Hey, {props.user.username}#{props.user.discriminator}
+        Hey, {props.user.username}#{props.user.discriminator} ( ID:{props.user.id} )
     </h1>
   );
 }
